@@ -22,8 +22,14 @@
         <div class="offcanvas-header">
             <h5 class="offcanvas-title display-6" id="offcanvasNavLabel">Visual Studio Hotkeys</h5>
         </div>
-        <div class="offcanvas-body">
-            <!-- table of contents generated here by tocbot -->
+        <div class="offcanvas-body d-flex flex-column">
+            <div id="toc" class="flex-grow-1">
+                <!-- table of contents generated here by tocbot -->
+            </div>
+            <a href="https://learn.microsoft.com/en-us/visualstudio/ide/default-keyboard-shortcuts-in-visual-studio"
+                target="_blank" class="fst-italic">
+                Click here to see exhaustive list of Visual Studio Hotkeys
+            </a>
         </div>
     </div>
 
@@ -201,7 +207,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.25.0/tocbot.min.js"></script>
     <script>
         tocbot.init({
-            tocSelector: '.offcanvas-body',
+            tocSelector: '#toc',
             contentSelector: '.container',
             headingSelector: 'h2',
             orderedList: false,
