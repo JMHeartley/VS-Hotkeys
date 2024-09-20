@@ -12,26 +12,6 @@
 </head>
 
 <body>
-    <nav class="navbar fixed-top">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav"
-                aria-controls="offcanvasNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
-    </nav>
-    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNav" aria-labelledby="offcanvasNavLabel">
-        <div class="offcanvas-header d-flex justify-content-between">
-            <h5 class="offcanvas-title display-6" id="offcanvasNavLabel">VS Hotkeys</h5>
-            <img src="favicon.svg" alt="Visual Studio logo" class="col-2" />
-        </div>
-        <div class="offcanvas-body d-flex flex-column">
-            <div id="toc" class="flex-grow-1">
-                <!-- table of contents generated here by tocbot -->
-            </div>
-        </div>
-    </div>
-
     <div class="container pt-5">
 
         <h1 class="text-center">Visual Studio Hotkeys</h1>
@@ -315,22 +295,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.25.0/tocbot.min.js"></script>
-    <script>
-        tocbot.init({
-            tocSelector: '#toc',
-            contentSelector: '.container',
-            headingSelector: 'h2',
-            orderedList: false,
-            scrollSmooth: false,
-            onClick: function (e) {
-                const offcanvases = document.getElementsByClassName('offcanvas');
-                const bsOffcanvasElement = offcanvases[0];
-                const bsOffcanvas = bootstrap.Offcanvas.getInstance(bsOffcanvasElement);
-                bsOffcanvas.hide();
-            }
-        })
-    </script>
 </body>
 
 </html>
